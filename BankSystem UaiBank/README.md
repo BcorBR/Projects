@@ -1,14 +1,14 @@
-# 💳 Sistema Bancário em C
+# 💳 Banking System in C
 
-Este é um sistema bancário simples desenvolvido em C que permite gerenciar usuários, realizar transações e manter um registro de informações no arquivo `UserData.txt`. O programa oferece uma interface interativa para realizar operações como cadastro, busca, remoção de usuários e transferências.
+This is a simple banking system developed in C that allows users to manage accounts, perform transactions, and maintain a record of information in the `UserData.txt` file. The program provides an interactive interface to carry out operations such as registration, search, user removal, and transfers.
 
-## Funcionalidades
+## Features
 
-O sistema permite as seguintes operações:
+The system allows the following operations:
 
-1. **👤 Cadastrar um novo usuário**: O usuário pode registrar um único novo cliente.
-2. **📋 Cadastrar múltiplos usuários**: O usuário pode cadastrar vários clientes de uma vez.
-3. **🔍 Buscar um usuário por ID**: Permite encontrar um usuário específico pelo seu ID.
-4. **💸 Realizar transferências**: O usuário pode transferir saldo entre contas.
-5. **🗑️ Remover um usuário por ID**: Permite excluir um usuário do sistema.
-6. **❌ Sair**: Encerrar o programa.
+1. **👤 Register a new user**: Users can register a single new client.
+2. **📋 Register multiple users**: Users can register several clients at once.
+3. **🔍 Search for a user by ID**: Allows finding a specific user by their ID.
+4. **💸 Perform transfers**: Users can transfer balance between accounts.
+5. **🗑️ Remove a user by ID**: Allows deleting a user from the system.
+6. **❌ Exit**: End the program.
