@@ -1,6 +1,6 @@
 # 💳 Banking System in C
 
-This is a simple banking system developed in C that allows users to manage accounts, perform transactions, and maintain a record of information in the `UserData.txt` file. The program provides an interactive interface to carry out operations such as registration, search, user removal, and transfers.
+This is a banking system developed in C that allows users to manage accounts, perform transactions, and maintain a record of information in the `UserData.txt` file. The program provides an interactive interface to carry out operations such as registration, search, user removal, and transfers.
 
 ## Features
 
