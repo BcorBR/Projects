@@ -34,7 +34,3 @@ In addition to the main sorting functionality, this project includes a separate 
 1. For each test case, the program reads the input from the `input/` folder, processes the sorting algorithm, and generates the corresponding output in `output_personal/`.
 2. It compares the generated output with the reference output in `output_original/`. If any differences are found, the differing lines are written to the `analysis/` folder, with a `?` at the end of the line to indicate the error.
 3. If no differences are found, the file in `analysis/` is deleted, indicating the outputs match.
-
-### 💡 Example of a Discrepancy:
-If the following is found in `output_personal/`:
-
