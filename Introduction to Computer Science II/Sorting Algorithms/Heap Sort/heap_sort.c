@@ -4,6 +4,7 @@
 // Time complexity: O(nlogn)
 // Space complexity: O(1) for iterative implementation and O(logn) for recursive implementation
 // Typically not stable but can be made stable depending of implementation
+// Non-adaptable
 
 void swap(int *x, int *y){
     int tmp = *x;
