@@ -7,6 +7,7 @@
 // In this case, the gap number will be found with the formula g = (3^k - 1)/2
 // Time complexity will therefore be O(n^(3/2))
 // Space Complexity is O(1)
+// It's not adaptable as it will always scan through all the gaps
 
 // g = gaps
 // k = number of sort
@@ -14,6 +15,8 @@
 // g = (3^k - 1)/2
 // gap will be: 1, 4, 13, 40, 121...
 // gap will never be greater than n/3
+
+// the last gap must be one and, for better results, gaps should be primes
 
 void swap(int *x, int *y){
     int tmp = *x;
