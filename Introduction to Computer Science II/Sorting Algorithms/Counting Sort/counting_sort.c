@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Time complexity = O(n + k), where n is the size of the original array \
+   and k is the size of the frequency array
+// Space Complexity = O(n + k)
+// Really fast for small numbers
+// Stable Algorithm
+// 
+
 void printArray(int *arr, int size){
     for (int i = 0; i < size; i++)
         printf("%d", arr[i]);
