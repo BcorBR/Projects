@@ -9,18 +9,27 @@ void swap(int *x, int *y){
     *y = tmp; 
 }
 
-void heapSort(int *arr, int size){
-    int finIdx = size - 1;
-    int i;
+void quickSort(int *arr, int left, int right) {
+    if (left >= right) 
+        return;
     
-    while (finIdx != 0){
-        for (i = finIdx; i > 0; i--){
-            if (arr[i] > arr[(i - 1) / 2])
-                swap(&arr[i], &arr[(i - 1) / 2]);
-        }
-        swap(arr, &arr[finIdx]);
-        finIdx -= 1;
+    int mid = (right + left)/2;
+    int pivot = arr[mid];
+    int i = left;
+    int j = right;
+    while(1) {
+        while(arr[i] < pivot) 
+            i++;
+        while(arr[j] > pivot) 
+            j--;
+        if (i >= j) 
+            break;
+        swap(&arr[i], &arr[j]);
+        i++;
+        j--;
     }
+    quickSort(arr, left, j);
+    quickSort(arr, j+1, right);
 }
 
 int interpolSearch(int first, int last, int val, int *arr){
@@ -37,6 +46,25 @@ int interpolSearch(int first, int last, int val, int *arr){
     }
     if (arr[first] == val)
         return 1;
+    return 0;
+}
+
+int binSearch(int *arr, int val, int size){
+    int left = 0, mid;
+    int right = size - 1;
+
+    while (left <= right){
+        mid = left + (right - left) / 2;
+
+        if (val > arr[mid])
+            left = mid + 1;
+
+        else if (val < arr[mid])
+            right = mid - 1;
+    
+        else
+            return 1;
+    }
     return 0;
 }
 
@@ -66,9 +94,9 @@ int main(int argv[]){
 
     // if number of searches  is bigger than log2(n), sort it
     if (Amount2 > log(Amount)/log(2)){
-        heapSort(arr1, Amount);
+        quickSort(arr1, 0, Amount - 1);
         for (int i = 0; i < Amount2; i++){
-            if (interpolSearch(0, Amount - 1, arr2[i], arr1))
+            if (binSearch(arr1, arr2[i], Amount))
                 printf("1\n");
             else
                 printf("0\n");
@@ -76,7 +104,7 @@ int main(int argv[]){
     }
     else{
         for (int i = 0; i < Amount2; i++){
-            if (LinSearch(arr2[i], arr1, Amount - 1))
+            if (LinSearch(arr2[i], arr1, Amount))
                 printf("1\n");
             else
                 printf("0\n");
