@@ -15,9 +15,18 @@ int main(){
     scanf("%d", &ElementAmount); //amount of elements to be read
 
     int curElement;
+    float testElement;
     int pos;
     for (ElementAmount; ElementAmount > 0; ElementAmount--){
-        scanf("%d", &curElement);
+        scanf("%f", &testElement);
+
+        // tests if element is valid
+        if (testElement < 0 || testElement != (int)testElement)
+            continue;
+        
+        // if it's valid
+        curElement = (int)testElement;
+        
         pos = curElement % capacity;
         
         // look for right position
@@ -45,9 +54,17 @@ int main(){
     scanf("%d", &removeAmount);
 
     for (removeAmount; removeAmount > 0; removeAmount--){
-        scanf("%d", &curElement);
-        pos = curElement % capacity;
+        scanf("%f", &testElement);
+
+        // tests if element is valid
+        if (testElement < 0 || testElement != (int)testElement)
+            continue;
         
+        // if it's valid
+        curElement = (int)testElement;
+
+        pos = curElement % capacity;
+
         while (pos < capacity){
             // we found our element
             if (set[pos] == curElement){
@@ -59,12 +76,23 @@ int main(){
     }
 
 
+
     // search elements
     int searchAmount;
     scanf("%d", &searchAmount);
 
     for (searchAmount; searchAmount > 0; searchAmount--){
-        scanf("%d", &curElement);
+        scanf("%f", &testElement);
+
+        // tests if element is valid
+        if (testElement < 0 || testElement != (int)testElement){
+            printf("-1 ");
+            continue;
+        }
+        
+        // if it's valid
+        curElement = (int)testElement;
+        
         pos = curElement % capacity;
 
         while (pos < capacity){
